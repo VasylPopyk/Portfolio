@@ -1,0 +1,60 @@
+.site_content{
+    margin-top: 50px;
+}
+.site_content_header{
+    width: 100%;
+}
+.site_content_header h1{
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+.site_content_content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.site_content_desc{
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 300;
+    padding: 15px;
+    max-width: 450px;
+}
+.site_content_video{
+    width: 450px;
+    overflow: hidden;
+    height: 350px;
+}
+.site_content_video iframe{
+    width: 100%;
+    height: 100%;
+}
+.site_content_footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px 0px 0px;
+}
+.site_content_footer h1{
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    margin: 0px 150px;
+}
+.site_content_footer input{
+    width: 200px;
+    height: 30px;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px 150px;
+}
