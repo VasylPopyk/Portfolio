@@ -1,0 +1,64 @@
+.creation{
+    @include flex(column, center, center, nowrap);
+    .creation_head{
+        width: 100%;
+        h1{@include font(32px, 600, white, 120%);font-family: Preahvihear; text-align: center;}
+    }
+    .creation_content{
+        width: 100%;
+        .creation_content_items{
+            @include flex(column, center, center, nowrap);
+            .creation_content_item{
+                width: 100%;
+                margin: 20px 0;
+                @include flex(row, center, center, nowrap);
+                transition: all 0.7s ease 0s;
+                opacity: 0;
+                transform: translateY(-20px);
+                &.active {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all 0.7s ease 0s;
+                }
+                &:nth-child(2){
+                    .creation_content_item_text{background: linear-gradient(45deg, #306494, #227e7e);}
+                }
+                &:nth-child(3){
+                    .creation_content_item_text{background: linear-gradient(45deg, #945630, #306494);}
+                }
+                &:nth-child(4){
+                    .creation_content_item_text{background: linear-gradient(45deg, #306494, #227e48);}
+                }
+                .creation_content_item_num{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    @include flex(row, center, center, nowrap);
+                    background-color: white;
+                    box-shadow: 0px 0px 10px white;
+                    @include font(24px, 600, #9857D3, 120%);
+                }
+                .creation_content_item_text{
+                    width: 600px;
+                    height: 300px;
+                    padding: 10px 20px;
+                    background: linear-gradient(45deg, #42265d, #306494);
+                    margin: 10px;
+                    border-radius: 10px;
+                    @include flex(column, flex-start, center, nowrap);
+                    h3{@include font(24px, 600, white, 150%); margin: 10px 0;}
+                    p{@include font(20px, 400, white, 130%); margin: 5px 0;}
+                }
+                @media(max-width: 740px){
+                    flex-direction: column;
+                    .creation_content_item_num{
+                        margin: 10px;
+                    }
+                    .creation_content_item_text{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

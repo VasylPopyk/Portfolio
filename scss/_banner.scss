@@ -1,0 +1,39 @@
+.banner{
+    padding: 60px 0;
+    @include flex(row, center, space-between, nowrap);
+    position: relative;
+    .banner_text{
+        @include flex(column, flex-start, flex-start, nowrap);
+        h1{@include font(32px, 600, white, 120%);font-family: Preahvihear;}
+        p{@include font(22px, 600, white, 120%);font-family: Preahvihear; max-width: 600px;}
+    }
+    .banner_media{
+        @include flex(column, center, center, nowrap);
+        div{
+            position: relative;
+                top: 0;
+                left: 0;
+            img{
+                position: relative;
+                width: 200px;height: 200px;border-radius: 50%; object-fit: cover;
+                z-index: 2;
+            }
+            .banner_polotno{
+                content: "";
+                display: block;
+                width: 210px;
+                height: 210px;
+                background: linear-gradient(45deg, #763CAC, #850f0f);
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                z-index: 1;
+                border-radius: 50%;
+            }
+        }
+        h3{@include font(22px, 600, white, 120%);font-family: Preahvihear;}
+    }
+    @media(max-width: 990px){
+        padding: 65px 5px;
+    }
+}

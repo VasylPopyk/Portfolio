@@ -1,0 +1,71 @@
+.projects{
+    @include flex(column, center, center, nowrap);
+    .projects_head{
+        width: 100%;
+        h1{@include font(32px, 600, white, 120%);font-family: Preahvihear; text-align: center}
+        p{@include font(20px, 400, white, 120%);font-family: Preahvihear; text-align: center;}
+    }
+    .projects_content{
+        width: 100%;
+        @include flex(row, center, center, wrap);
+        .projects_item{
+            @include flex(row, center, center, nowrap);
+            position: relative;
+            top: 0;
+            left: 0;
+            margin: 40px;
+            &:nth-child(2){
+                .projects_item_text{background: linear-gradient(45deg, #306494, #227e7e);}
+            }
+            &:nth-child(3){
+                .projects_item_text{background: linear-gradient(45deg, #945630, #306494);}
+            }
+            &:nth-child(4){
+                .projects_item_text{background: linear-gradient(45deg, #306494, #227e48);}
+            }
+            &:nth-child(5){
+                .projects_item_text{background: linear-gradient(60deg, #923094, #227e48);}
+            }
+            .projects_item_text{
+                padding: 0 30px;
+                border-radius: 5px;
+                width: 250px;
+                margin: 10px;
+                box-shadow: 0px 0px 20px #42265d;
+                background: linear-gradient(45deg, #42265d, #306494);
+                h4{@include font(18px, 600, white, 100%);}
+                h3{@include font(24px, 600, white, 120%);}
+                z-index: 2;
+                position: absolute;
+                top: 50%;
+                right: 30%;
+            }
+            .projects_item_media{
+                img{width: 400px;
+                height: auto;}
+                z-index: 1;
+            }
+            @media(max-width: 580px){
+                .projects_item_text h3{font-size: 18px;}
+                .projects_item_text h4{font-size: 16px;}
+                .projects_item_text{
+                    position: absolute;
+                    width: auto;
+                    min-width: 200px;
+                    top: 70%;
+                    right: 20%;
+                }
+                .projects_item_media{
+                    img{width: 100%;}
+                }
+            }
+            @media(max-width: 450px){
+                .projects_item_text{
+                    position: absolute;
+                    top: 70%;
+                    right: 10%;
+                }
+            }
+        }
+    }
+}

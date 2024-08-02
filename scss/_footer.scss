@@ -1,0 +1,26 @@
+.footer{
+    @include flex(column, center, center, nowrap);
+    padding: 20px 0;
+    .footer_content{
+        @include flex(column, center, center, nowrap);
+        margin: 20px 0;
+        h3{@include font(22px, 500, white, 120%);font-family: Preahvihear; margin: 10px 20px;}
+        a{
+            background: linear-gradient(45deg, #945630, #306494);
+            width: 300px;
+            height: 60px;
+            @include flex(row, center, center, nowrap);
+            border-radius: 5px;
+            margin: 10px;  
+            text-decoration: none;
+            @include font(18px, 400, white, 120%);
+            box-shadow: 0px 0px 10px #306494;
+            transition: all 0.7s ease 0s;
+            &:hover{
+                box-shadow: 0px 0px 30px #306494;
+                transition: all 0.7s ease 0s; 
+            }
+        }
+    }
+    p{@include font(14px, 400, white, 120%);}
+}
